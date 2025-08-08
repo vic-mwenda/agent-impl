@@ -1,0 +1,22 @@
+{
+  "name": "inf-test",
+  "version": "1.0.0",
+  "main": "src/main.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^6.1.2",
+    "@xenova/transformers": "^2.17.2",
+    "dotenv": "^17.2.1",
+    "groq": "^3.99.0",
+    "groq-sdk": "^0.30.0",
+    "neo4j-driver": "^5.28.1",
+    "uuid": "^11.1.0"
+  }
+}
