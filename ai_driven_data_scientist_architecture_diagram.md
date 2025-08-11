@@ -5,12 +5,12 @@ Below is a single-page architecture diagram and supporting notes you can use wit
 ```mermaid
 flowchart TB
   subgraph SOURCES[Data Sources]
-    A1[Databases (SQL/NoSQL)]
-    A2[Cloud Storage (S3, GCS)]
+    A1[Databases: SQL/NoSQL]
+    A2[Cloud Storage: S3, GCS]
     A3[APIs & SaaS]
-    A4[Streaming (Kafka, Kinesis)]
-    A5[Files (CSV, Excel, Parquet)]
-    A6[Unstructured (Text, Images)]
+    A4[Streaming: Kafka, Kinesis]
+    A5[Files: CSV, Excel, Parquet]
+    A6[Unstructured: Text, Images]
   end
 
   subgraph INGEST[Ingestion & Storage]
@@ -26,27 +26,27 @@ flowchart TB
     C4[Feature Store]
   end
 
-  subgraph ML[ML & Reasoning]
+  subgraph ML[Machine Learning & Reasoning]
     D1[Planner / Workflow Synthesizer]
     D2[AutoML / Model Zoo]
-    D3[Hyperparam Search]
+    D3[Hyperparameter Search]
     D4[Explainability (SHAP/LIME)]
     D5[Model Registry]
     D6[Continuous Learning]
   end
 
   subgraph INSIGHTS[Insights & Delivery]
-    E1[Insight Writer (NLG)]
+    E1[Narrative Generation (NLG)]
     E2[Visualization Engine]
     E3[Recommendation Engine]
-    E4[Notebook Generator / Code Export]
+    E4[Notebook/Code Export]
   end
 
   subgraph ORCH[Orchestration & Governance]
-    F1[Workflow Orchestrator (Airflow/Kuberflow)]
-    F2[Agents (Planner, Cleaner, Modeler, Reporter)]
+    F1[Workflow Orchestrator]
+    F2[Specialized Agents]
     F3[Policy & Access Control]
-    F4[Audit / Lineage]
+    F4[Audit & Lineage Tracking]
     F5[Monitoring & Observability]
   end
 
@@ -54,16 +54,15 @@ flowchart TB
     G1[Conversational Chat UI]
     G2[Web Dashboard]
     G3[APIs / SDKs]
-    G4[BI Integrations (PowerBI/Tableau)]
+    G4[BI Integrations]
   end
 
-  subgraph SEC[Cross-cutting]
+  subgraph SEC[Cross-Cutting Concerns]
     H1[Security & Encryption]
     H2[Data Privacy & Compliance]
     H3[Secrets / Key Management]
   end
 
-  %% Links
   A1 --> B1
   A2 --> B1
   A3 --> B1
@@ -80,8 +79,8 @@ flowchart TB
   C1 --> C3
   C2 --> C3
   C3 --> C4
-  C4 --> D2
   C4 --> D1
+  C4 --> D2
 
   D1 --> D2
   D2 --> D3
@@ -108,11 +107,6 @@ flowchart TB
   H1 --> B2
   H2 --> B2
   H3 --> D5
-
-  click D1 "#" "Planner details"
-
-  classDef crosscut fill:#f9f,stroke:#333,stroke-width:1px
-  class SEC crosscut
 ```
 
 ---
