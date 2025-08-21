@@ -2,6 +2,8 @@ import { CalculatorTool } from './calculator.tool.js';
 import { FileReaderTool } from './file-reader.tool.js';
 import { FileEditorTool } from './file-editor.tool.js';
 import { SessionManagerTool } from './session-manager.tool.js';
+import { DatabaseAnalysisTool } from './database-analysis.tool.js';
+
 
 class ToolRegistry {
     constructor() {
@@ -14,6 +16,7 @@ class ToolRegistry {
         this.registerTool(new FileReaderTool());
         this.registerTool(new FileEditorTool());
         this.registerTool(new SessionManagerTool());
+        this.registerTool(new DatabaseAnalysisTool());
     }
 
     registerTool(tool) {

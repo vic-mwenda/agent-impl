@@ -1,6 +1,6 @@
-# ERP Management Agent
+# Intelligent Management Agent
 
-An intelligent agent system designed to manage and interact with ERP systems through natural language. This agent uses advanced LLM capabilities combined with custom tools to provide an intuitive interface for ERP management tasks.
+An intelligent agent system that uses advanced LLM capabilities combined with custom tools to provide an intuitive interface for various management and automation tasks.
 
 ## Features
 
@@ -20,8 +20,8 @@ An intelligent agent system designed to manage and interact with ERP systems thr
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/erp-management-agent.git
-cd erp-management-agent
+git clone https://github.com/yourusername/intelligent-management-agent.git
+cd intelligent-management-agent
 ```
 
 2. Install dependencies:
@@ -58,18 +58,18 @@ npm start
 
 ### Example Interactions
 ```
-You> Create a new sales order for customer XYZ
-Agent> I'll help you create a sales order. Let me gather the necessary information...
+You> Analyze the performance metrics for Project X
+Agent> I'll help you analyze the performance metrics. Let me gather the necessary information...
 
-You> Generate a monthly revenue report
-Agent> I'll generate a revenue report. Would you like to specify a date range?
+You> Generate a summary report for the last quarter
+Agent> I'll generate a summary report. Would you like to specify any particular metrics to focus on?
 ```
 
 ## Project Roadmap
 
 ### Immediate Tasks
 - [ ] Database Operations Tool
-  - CRUD operations for ERP entities
+  - CRUD operations
   - Query builder and executor
   - Transaction management
 
@@ -110,7 +110,7 @@ graph TD
     A[Main Agent] --> B[Session Manager]
     A --> C[Tool System]
     A --> D[Memory Service]
-    C --> E[ERP Tools]
+    C --> E[Custom Tools]
     C --> F[System Tools]
     C --> G[Integration Tools]
     B --> H[Storage Service]
